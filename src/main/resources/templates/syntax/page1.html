@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법 페이지 1</title>
+</head>
+<body style="font-size: 35px">
+    <div>
+        <span th:if="${username != null}">
+            [[${username}]] 회원님 반갑습니다.
+        </span>
+        <span th:unless="${username != null}">
+              로그인 또는 회원가입을 해주세요!
+        </span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      layout:decorate="~{layouts/basic_layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <!--    <title> 게시글 :: [[ ${post.title} ]]!</title>-->
+</head>
+<body>
+<div layout:fragment="contents">
+    <span class="text-2xl font-bold"> [[ ${post.title} ]] </span>
+    <div class="post-meta-container">
+            <span class="text-gray-500 text-sm">
+                [[ ${post.id} ]]번 글, 작성자 : [[ ${post.author} ]]
+            </span>
+    </div>
+    <div class="divider"></div>
+    <p th:text="${post.getContents()}"></p>
+</div>
+</body>
+</html>

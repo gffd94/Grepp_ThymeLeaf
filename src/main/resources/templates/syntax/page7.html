@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법 페이지 7</title>
+</head>
+<body>
+    <input type="text" id="username" disabled>
+    <script th:inline="javascript">
+        const username = /*[[${usernaem}]]*/"admin";
+        let elementById = document.getElementById('username');
+        elementById.value = username;
+    </script>
+</body>
+</html>
